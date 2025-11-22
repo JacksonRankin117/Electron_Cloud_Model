@@ -205,73 +205,183 @@ Where $l$ and $m$ are the and angular momentum and magnetic quantum numbers resp
 
 We now have our second result. By now we have completely forgotten what we are working on, and have to remind ourselves that of course the last part we need to solve for is the radial solution.
 
-$$\frac{1}{R}\left[\frac{d}{d r}\left(r^{2}\frac{d R}{d r}\right)\right] -\frac{2mr^2}{\hbar^2}(U-E) = \lambda$$
-
-We know from above that $\lambda$ is $l(l+1)$, but we can do some simplification before we plug it in:
+Start from:
 
 $$
-\frac{1}{R}\left[\frac{d}{d r}\left(r^{2}\frac{d R}{d r}\right)\right] - 
-
-\frac{2mr^2}{\hbar^2}(U-E) = 
-
-\lambda
+\frac{1}{R}\frac{d}{dr}\!\big(r^{2}R'\big)
+-\frac{2mr^{2}}{\hbar^{2}}(U-E)
+= \lambda.
 $$
 
-$$
-\frac{d}{d r}\left(r^{2}\frac{d R}{d r}\right) - 
-
-\frac{2mr^2}{\hbar^2}(U-E)R = 0
-
-R\lambda
-$$
+Multiply by $R$:
 
 $$
-2rR' + r^2R''- 
-
-\left[\frac{2mr^2}{\hbar^2}(U-E) - \lambda \right]R = 0
+\frac{d}{dr}(r^{2}R') 
+- \frac{2mr^{2}}{\hbar^{2}}(U-E)R
+= \lambda R.
 $$
 
-Now we can plug in $\lambda$
+Rearrange:
 
 $$
-2rR' + r^2R''- 
-
-\left[\frac{2mr^2}{\hbar^2}(U-E) - l(l+1) \right]R = 0
+\frac{d}{dr}(r^{2}R') 
+- \Big[\frac{2mr^{2}}{\hbar^{2}}(U-E) + \lambda\Big]R
+= 0.
 $$
 
-Lets think about our potential energy for a second. Right now we are assuming the atom is alone in an empty universe. There is no external force on the atom, and therefore, the only force the electron feels on the aton is the Coulomb force from the nucleus.
-
-The potential energy from a hydrogen-like atom is as such:
-
-$$U = -\frac{1}{4 \pi \epsilon_0} \frac{q_1q_2}{r}$$
-
-If we look at the net charge of the nucleus of the atom, we see that we can just multiply the charge of the proton multiplied by the atomic number, which is the number of protons in each atom. Protons and electrons have equal but opposite charge, so the potential energy can be simplified to:
-
-$$U = \frac{Ze^2}{4 \pi \epsilon_0 r}$$
-
-And we can now throw it in the equation:
+Use:
 
 $$
-2rR' + r^2R''- 
-
-\left[\frac{2mr^2}{\hbar^2}(\frac{Ze^2}{4 \pi \epsilon_0 r}-E) - l(l+1) \right]R = 0
+\frac{d}{dr}(r^{2}R') = 2rR' + r^{2}R''.
 $$
 
+Then:
+
 $$
-2rR' + r^2R''+
-
-\left[(\frac{2Emr^2}{\hbar^2} -\frac{2mr^2}{\hbar^2}\frac{Ze^2}{4 \pi \epsilon_0 r}) + l(l+1) \right]R = 0
+2rR' + r^{2}R''
+- \Big[\frac{2mr^{2}}{\hbar^{2}}(U-E) + \lambda\Big]R
+= 0.
 $$
 
-To make our lives easier, lets make a substitution:
+Let $u(r)=rR(r)$. Then:
 
-$$u(r) = rR(r)$$
+$$
+u' = R + rR', \qquad
+u'' = 2R' + rR''.
+$$
 
-so that
+So:
 
-$$R = \frac{u}{r}\text{.}$$
+$$
+r u'' = 2rR' + r^{2}R''.
+$$
 
-Lets find $R'$:
+Substitute:
 
-$$\frac{dR}{dr} = \frac{d}{dr} \frac{u}{r} = \frac{1}{r} 
-\frac{du}{dr} - \frac{u}{r^2}$$
+$$
+r u'' 
+- \Big[\frac{2mr^{2}}{\hbar^{2}}(U-E) + \lambda\Big]\frac{u}{r}
+= 0.
+$$
+
+Divide by $r$:
+
+$$
+u'' 
+- \Big[\frac{2m}{\hbar^{2}}(U-E) + \frac{\lambda}{r^{2}}\Big]u
+= 0.
+$$
+
+Insert $\lambda = \ell(\ell+1)$:
+
+$$
+u'' 
+- \Big[\frac{2m}{\hbar^{2}}(U-E) 
++ \frac{\ell(\ell+1)}{r^{2}}\Big]u
+= 0.
+$$
+
+Rewrite using $E-U$:
+
+$$
+u'' 
++ \Big[\frac{2m}{\hbar^{2}}(E-U) 
+- \frac{\ell(\ell+1)}{r^{2}}\Big]u
+= 0.
+$$
+
+And finally, we get a result:
+
+$$
+u''(r)
+= \left[
+\frac{\ell(\ell+1)}{r^{2}}
++ \frac{2m}{\hbar^{2}} \big( U(r) - E \big)
+\right] u(r)
+$$
+
+We know that the potential of a charged particle is given by:
+
+$$U = \frac{1}{4\pi \varepsilon_0} \frac{q_1q_2}{r}$$
+
+And for a positive nucleus with a charge of $-Ze$, where $Z$ is the quantity of protons, and $e$ is the charge of an electron, we get:
+
+$$U = -\frac{Ze^2}{4\pi \varepsilon_0} $$
+
+Substituting:
+
+$$
+u''(r)
+= \left[
+\frac{\ell(\ell+1)}{r^{2}}
+
+-\frac{2m}{\hbar^{2}}\left(\frac{Ze^2}{4\pi \varepsilon_0} \right)
+
+- \frac{2mE}{\hbar^{2}} \right] u(r)
+$$
+
+At small $r$ $(r \to 0)$:
+
+$$
+u(r) \sim r^{\ell+1}
+$$
+
+At large $r$ $(r \to \infty)$:
+
+$$
+u(r) \sim e^{-k r}, \quad k = \frac{\sqrt{-2 m E}}{\hbar}
+$$
+
+So we set:
+
+$$
+u(r) = r^{\ell+1} e^{-k r} v(r)
+$$
+
+where $v(r)$ is a regular function.
+
+Now we solve for $v(r)$
+
+Plugging $u(r) = r^{\ell+1} e^{-k r} v(r)$ into the radial equation gives a differential equation with polynomial solutions:
+
+$$
+v(r) = L_{n-\ell-1}^{2\ell+1}(2 k r)
+$$
+
+where $L_p^q(x)$ is an associated Laguerre polynomial, and:
+
+- $n = 1, 2, 3, \dots$ (principal quantum number)  
+- $\ell = 0, 1, \dots, n-1$ (orbital quantum number)
+
+
+So our full radial wavefunction is:
+
+$$
+R_{n\ell}(r) = \frac{u(r)}{r} = r^\ell e^{-k r} L_{n-\ell-1}^{2\ell+1}(2 k r)
+$$
+
+Energy eigenvalues
+
+The quantization condition gives the hydrogenic energy levels:
+
+$$
+E_n = - \frac{m Z^2 e^4}{2 (4 \pi \varepsilon_0)^2 \hbar^2 n^2}, \quad n = 1, 2, 3, \dots
+$$
+
+### Summary
+
+- **Radial wavefunction**: $R_{n\ell}(r) = r^\ell e^{-k r} L_{n-\ell-1}^{2\ell+1}(2 k r)$
+- **Angular wavefunction**: $Y_\ell^m(\theta, \phi) = P_\ell^m(\cos\theta) e^{i m \phi}$
+- **Full hydrogenic wavefunction**: 
+
+$$
+\psi_{n\ell m}(r, \theta, \phi) = R_{n\ell}(r) Y_\ell^m(\theta, \phi)
+$$
+
+So, yeah, that was a mess.
+
+Now how do we do it numerically?
+
+## Numerical Solution
+
+There are several ways to solve this accurately.
