@@ -141,9 +141,9 @@ Because of its oscillatory nature. So,
 
 $$\Phi(\phi) = Ce^{im(\phi)} = Ce^{im(\phi + 2\pi)}$$
 
-This implies that $m$ can really only be integer multiples. So, our solution is:
+This implies that $m$ can really only be integer multiples. After normalization, the constant $C$ we find to be 1, So, our solution is:
 
-$$\Phi = Ce^{im\phi}$$
+$$\Phi = e^{im\phi}$$
 
 Whew. Thats one of three solutions we need.
 
@@ -384,4 +384,5 @@ Now how do we do it numerically?
 
 ## Numerical Solution
 
-There are several ways to solve this accurately.
+There are several ways to solve this accurately. One way is to expand this solution into its various factors, compute each factor, and plot it.
+

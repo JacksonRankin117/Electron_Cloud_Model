@@ -1,0 +1,15 @@
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net9.0/Electron_Cloud_Model.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net9.0/Electron_Cloud_Model.AssemblyInfoInputs.cache
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net9.0/Electron_Cloud_Model.AssemblyInfo.cs
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net9.0/Electron_Cloud_Model.csproj.CoreCompileInputs.cache
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net9.0/Electron_Cloud_Model.sourcelink.json
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/bin/Debug/net9.0/Electron_Cloud_Model
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/bin/Debug/net9.0/Electron_Cloud_Model.deps.json
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/bin/Debug/net9.0/Electron_Cloud_Model.runtimeconfig.json
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/bin/Debug/net9.0/Electron_Cloud_Model.dll
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/bin/Debug/net9.0/Electron_Cloud_Model.pdb
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net9.0/Electron_Cloud_Model.dll
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net9.0/refint/Electron_Cloud_Model.dll
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net9.0/Electron_Cloud_Model.pdb
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net9.0/Electron_Cloud_Model.genruntimeconfig.cache
+/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net9.0/ref/Electron_Cloud_Model.dll
