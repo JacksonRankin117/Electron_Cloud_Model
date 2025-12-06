@@ -8,7 +8,7 @@ class ColorMap
         if (value < 0) value = 0;
         if (value > 1) value = 1;
 
-        int r = (int)(value * 255);
+        int r = (int)(value * 0);
         int g = (int)(value * 255);
         int b = (int)(value * 255);
 

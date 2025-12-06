@@ -1,5 +1,7 @@
 # Introduction to the Time-Independent Schrödinger Equation.
 
+*I'd recommend becoming familiar with the basics of multivariable calculus and partial differntial equations, specifically the method of separation of variables before continuing on. The following explains the analytical solution to the Time-Independant Schrödinger Equation (TISE), and lays the ground work for the solution that I implement with code.*
+
 For this project I have chosen to simulate electron clouds on hydrogen-like atoms. Hydrogen-like atoms are atoms where there is only one electron. We will also assume because of the distance from the nucleus and the orbiting electrons, that protons will occupy only one point in space, which is a fine approximation in our case.
 
 Because the probability distribution of the electron around the nucleus of the atom don't change in time at all, we can use the time-independent Schrödinger equation, which takes the form:
@@ -56,8 +58,6 @@ $U$ or $V$ can be gravitational potential energy, but in our case we will use po
 $E$ represents total energy of the system, which is often kinetic energy $T$ summed with potential energy $U$.
 
 ## Analytical Method - Separation of Variables.
-
-So, forget solving this equation numerically. How do we solve it with math?
 
 Our goal is to find what $\psi$ is, but you'll find very quickly that this is an extremely difficult thing to do. So what do we do?
 
@@ -378,11 +378,4 @@ $$
 \psi_{n\ell m}(r, \theta, \phi) = R_{n\ell}(r) Y_\ell^m(\theta, \phi)
 $$
 
-So, yeah, that was a mess.
-
-Now how do we do it numerically?
-
-## Numerical Solution
-
-There are several ways to solve this accurately. One way is to expand this solution into its various factors, compute each factor, and plot it.
-
+Angular harmonics and associated Legendre polynomials have known solutions, which we can implememnt very easily using code. 

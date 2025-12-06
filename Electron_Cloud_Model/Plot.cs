@@ -7,9 +7,9 @@ class Plot
     private static readonly ColorMap colormap = new ColorMap();
 
     // This function will take a 2D array and output an image file
-    public void PPMWriter(double[,] data, string filename)
+    public static void PPMWriter(double[,] data, string filename)
     {   
-        // FInd the dimensions of 'data' 2d array.
+        // Find the dimensions of the 2d array data
         int rows = data.GetLength(0);
         int cols = data.GetLength(1);
 
@@ -50,6 +50,23 @@ class Plot
                 data[y, x] = random.NextDouble();
 
         return data;
+    }
+
+    // This function will find the probability distribution from the value of the wavefunction
+    public double[,] PDist(double[,] psi)
+    {
+        // Find the dimensions of the data
+        int rows = psi.GetLength(0);
+        int cols = psi.GetLength(1);
+
+        // 2D double to hold the dist
+        double[,] prob = new double[rows, cols];
+
+        for (int y = 0; y < rows; y++)
+            for (int x = 0; x < cols; x++)
+            prob[y, x] = psi[y, x] * psi[y, x];
+
+        return prob;
     }
 
     // Normalize the data from 0 to 1
