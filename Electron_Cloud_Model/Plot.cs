@@ -1,6 +1,3 @@
-using System.IO;
-using System;
-
 class Plot
 {
     private static readonly Random random = new Random();

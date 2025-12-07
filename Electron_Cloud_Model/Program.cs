@@ -21,7 +21,7 @@ class Program
         // Calculate the orbital. This is really good for getting an image. I wouldn't recommend changing these arguments
         // They are set up in a way to get pretty good image resolution (2000 x 2000), and keeps the scaling fairly constant per 
         // orbital
-        double[,] density = Psi.Orbital(n, l, m, 6*n*n, 6*n*n, 10000 / (6*n*n));
+        double[,] density = Psi.Orbital(n, l, m, 6*n*n, 6*n*n, 2000 / (6*n*n));
 
         // NOTE: Since these algorithms are fairly quick, you probably don't have to wait that long for images that are 
         // ~10,000 pixels wide

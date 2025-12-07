@@ -1,5 +1,3 @@
-using System;
-
 class Radial
 {
     public static double a0 = 1;  // The Bohr radius in meters is actually 5.29177210544e-11, but using 1 will simplify calculations
