@@ -7,19 +7,24 @@ class Radial
     // This function returns the radial function solution of the TISE
     public static double RadialFunction(int n, int l, double r)
     {
-        // Convert r to atomic units if you want (optional)
-        double rho = 2.0 * r / (n * a0); 
+        if (n <= 0 || l < 0 || l >= n)
+            throw new ArgumentException("Invalid quantum numbers n and l");
 
-        // Factorials for normalization
-        double numerator = Factorial(n - l - 1);
-        double denominator = 2.0 * n * Factorial(n + l);
-        double norm = Math.Sqrt(Math.Pow(2.0 / (n * a0), 3) * numerator / denominator);
+        double rho = 2.0 * r / (n * a0);
+
+        // Normalization constant (correct formula)
+        double C_nl = Math.Sqrt(
+            Math.Pow(2.0 / (n * a0), 3) *
+            Factorial(n - l - 1) / (2.0 * n * Factorial(n + l))
+        );
 
         // Radial part
-        double radial = norm * Math.Exp(-rho / 2.0) * Math.Pow(rho, l) * AssociatedLaguerre(n - l - 1, 2 * l + 1, rho);
+        double radialUnnorm = Math.Exp(-rho / 2.0) * Math.Pow(rho, l) *
+                              AssociatedLaguerre(n - l - 1, 2 * l + 1, rho);
 
-        return radial; // This is R_nl(r)
+        return C_nl * radialUnnorm;
     }
+
 
 
     // Generates the associated Laguerre functions with given converted quantum numbers
@@ -46,14 +51,14 @@ class Radial
     }
 
     // Classic Factorial function. 
-    public static long Factorial(int n)
+    public static double Factorial(int n)
     {   
         // Checks for cases
         if (n < 0) throw new ArgumentException("n must be a positive number, bonehead. We are NOT doing the Gamma function");
         if (n == 0 || n == 1) return 1;
 
         // Iteration loop
-        long result = 1;
+        double result = 1;
         for (int i = 2; i <= n; i++)
         {
             result *= i;

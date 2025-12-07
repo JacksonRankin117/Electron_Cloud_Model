@@ -13,9 +13,6 @@ class Plot
         int rows = data.GetLength(0);
         int cols = data.GetLength(1);
 
-        // Normalize the data
-        data = Normalize(data);
-
         // Start file output
         using var writer = new StreamWriter(filename);
 
@@ -30,7 +27,7 @@ class Plot
             for (int x = 0; x < cols; x++)
             {
                 double value = data[y, x];
-                var (r, g, b) = colormap.Greyscale(value);
+                var (r, g, b) = colormap.HotCold(value);
 
                 writer.WriteLine($"{r} {g} {b}");
             }
@@ -61,40 +58,98 @@ class Plot
 
         // 2D double to hold the dist
         double[,] prob = new double[rows, cols];
+        double noise_floor = 1e-30; // Define a numerical noise floor
 
         for (int y = 0; y < rows; y++)
             for (int x = 0; x < cols; x++)
-            prob[y, x] = psi[y, x] * psi[y, x];
+            {
+                double psi_sq = psi[y, x] * psi[y, x];
+                if (psi_sq < noise_floor) 
+                {
+                    prob[y, x] = 0.0;
+                }
+                else
+                {
+                    prob[y, x] = psi_sq;
+                }
+            }
 
         return prob;
     }
 
     // Normalize the data from 0 to 1
     public static double[,] Normalize(double[,] data)
-    {   
-        // Initialize min and max values with minimum and maximum values of double datatype. 
-        // This will help handle any singularities
+    {
         double min = double.MaxValue;
         double max = double.MinValue;
 
-        // Find the maximum and minimum values for the dataset.
+        // Find extrema
         for (int y = 0; y < data.GetLength(0); y++)
             for (int x = 0; x < data.GetLength(1); x++)
-            {   
-                // Grabs the data point
+            {
                 double v = data[y, x];
-
-                // Updates the min and max values to find the true extrema values
                 if (v < min) min = v;
                 if (v > max) max = v;
             }
 
-        // Normalize the data
+        // Prevent divide-by-zero
+        if (Math.Abs(max - min) < 1e-14)
+        {
+            for (int y = 0; y < data.GetLength(0); y++)
+                for (int x = 0; x < data.GetLength(1); x++)
+                    data[y, x] = 0.0;
+
+            return data;
+        }
+
+        // Normalize
         for (int y = 0; y < data.GetLength(0); y++)
             for (int x = 0; x < data.GetLength(1); x++)
-                // Linearly squish the data between 0 and 1
                 data[y, x] = (data[y, x] - min) / (max - min);
 
         return data;
+    }
+
+    
+    public static double[,] LogScale(double[,] data)
+    {
+        int h = data.GetLength(0);
+        int w = data.GetLength(1);
+        double[,] outD = new double[h,w];
+
+        for(int y=0;y<h;y++)
+            for(int x=0;x<w;x++)
+                outD[y,x] = Math.Log10(data[y,x] + 1e-30);
+
+        return outD;
+    }
+
+    public static double[,] GammaNormalize(double[,] data, double gamma)
+    {
+        int h = data.GetLength(0);
+        int w = data.GetLength(1);
+
+        double min = double.MaxValue;
+        double max = double.MinValue;
+
+        for (int y = 0; y < h; y++)
+            for (int x = 0; x < w; x++)
+            {
+                double v = data[y, x];
+                if (v < min) min = v;
+                if (v > max) max = v;
+            }
+
+        double range = max - min;
+        double[,] norm = new double[h, w];
+
+        for (int y = 0; y < h; y++)
+            for (int x = 0; x < w; x++)
+            {
+                double v = (data[y, x] - min) / range;
+                norm[y, x] = Math.Pow(v, gamma);
+            }
+
+        return norm;
     }
 }

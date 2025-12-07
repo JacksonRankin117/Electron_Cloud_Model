@@ -62,7 +62,6 @@ class Angular
         double norm = Math.Sqrt((2.0 * l + 1) / (4.0 * Math.PI) * Factorial(l - Math.Abs(m)) / (double)Factorial(l + Math.Abs(m)));
         double leg = AssociatedLegendre(l, Math.Abs(m), Math.Cos(theta));
         Complex exp = Complex.Exp(Complex.ImaginaryOne * m * phi);
-        if (m < 0) leg *= Math.Pow(-1, m);
         return norm * leg * exp;
     }
 }
