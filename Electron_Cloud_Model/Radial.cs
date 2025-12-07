@@ -23,8 +23,6 @@ class Radial
         return C_nl * radialUnnorm;
     }
 
-
-
     // Generates the associated Laguerre functions with given converted quantum numbers
     public static double AssociatedLaguerre(int k, int alpha, double r)
     {   

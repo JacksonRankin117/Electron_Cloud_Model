@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Electron_Cloud_Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17ed6e243613b0942556c5936fb7f9cda5e2e0de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a74802bb08159bdd036409ff93d2a0bf3604218")]
 [assembly: System.Reflection.AssemblyProductAttribute("Electron_Cloud_Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Electron_Cloud_Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

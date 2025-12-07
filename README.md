@@ -6,9 +6,7 @@ The software generates and visualizes electron orbitals for hydrogen-like atoms.
 
 The purpose of this software is to create a flexible and interactive tool for exploring quantum mechanical orbitals. It serves both as a learning platform for visualizing abstract concepts like nodal structures and angular momentum, and as a practical exercise in software engineering—combining algorithm design, numerical methods, and data visualization. Additionally, it provides experience in optimizing performance for large datasets and handling complex data structures.
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/qLh1_4a3ZGE)
 
 # Development Environment
 

@@ -46,34 +46,6 @@ class Plot
         return data;
     }
 
-    // This function will find the probability distribution from the value of the wavefunction
-    public double[,] PDist(double[,] psi)
-    {
-        // Find the dimensions of the data
-        int rows = psi.GetLength(0);
-        int cols = psi.GetLength(1);
-
-        // 2D double to hold the dist
-        double[,] prob = new double[rows, cols];
-        double noise_floor = 1e-30; // Define a numerical noise floor
-
-        for (int y = 0; y < rows; y++)
-            for (int x = 0; x < cols; x++)
-            {
-                double psi_sq = psi[y, x] * psi[y, x];
-                if (psi_sq < noise_floor) 
-                {
-                    prob[y, x] = 0.0;
-                }
-                else
-                {
-                    prob[y, x] = psi_sq;
-                }
-            }
-
-        return prob;
-    }
-
     // Normalize the data from 0 to 1
     public static double[,] Normalize(double[,] data)
     {

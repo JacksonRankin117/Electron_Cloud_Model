@@ -10,8 +10,8 @@ class Program
         sw.Start();
 
         // Quantum Numbers
-        int n = 7;
-        int l = 5;
+        int n = 13;
+        int l = 7;
         int m = 2;
 
         // File path. Change this to your desired file destination.
