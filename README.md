@@ -1,10 +1,10 @@
 # Overview
 
-This project I made was to help further my understanding of the Schrödinger Equation and of computational physics. In the past I've made diffraction simulator engines, but I've not ever done anything that is involved with very much quantum mechanics, so this was a fun challenge for me. 
+I am developing this project to deepen my understanding of computational physics and to strengthen my skills in software development, particularly in numerical simulation, data visualization, and working with complex mathematical models. This project allows me to explore the intersection of physics and programming, building practical experience in implementing algorithms that simulate real-world phenomena.
 
-The software I wrote is compiled into many different classes, that all have a unique purpose. The Angular.cs, Radial.cs, and Psi.cs files all contain the necessary physics to simulate electron orbitals, the Plot.cs and ColorMap.cs files can be characterized by 
+The software generates and visualizes electron orbitals for hydrogen-like atoms. It calculates the wavefunctions using the quantum numbers n,l,m, and evaluates the corresponding radial and angular components. The program produces 2D representations of the probability densities, including optional log scaling or gamma normalization to highlight features, though I recommend gamma normalization, as log scaling tends to blow up the small values too much. It also supports multiple visualization modes, such as coloring by probability density or wavefunction phase.
 
-My purpose in writing this software is to help me understand better how electrons move in a hydrogen atom. 
+The purpose of this software is to create a flexible and interactive tool for exploring quantum mechanical orbitals. It serves both as a learning platform for visualizing abstract concepts like nodal structures and angular momentum, and as a practical exercise in software engineering—combining algorithm design, numerical methods, and data visualization. Additionally, it provides experience in optimizing performance for large datasets and handling complex data structures.
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code.}
 

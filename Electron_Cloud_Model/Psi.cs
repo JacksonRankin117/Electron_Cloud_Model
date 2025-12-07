@@ -49,7 +49,7 @@ class Psi
             psi_real = (psi_p + psi_m) / Math.Sqrt(2);
         }
 
-        // --- PROBABILITY DENSITY ---
+        // ********** PROBABILITY DENSITY **********
         density[iy, ix] = psi_real.Magnitude * psi_real.Magnitude;
     }
 

@@ -34,10 +34,10 @@ class Plot
         }
     }
 
-    // This function returns a dataset flled with random values.
+    // This function returns a dataset filled with random values.
     public double[,] RandData(int width, int height)
     {   
-        // Initializes the dataset with varible dimensions
+        // Initializes the dataset with variable dimensions
         double[,] data = new double[height, width];
 
         // Iterates through each index
