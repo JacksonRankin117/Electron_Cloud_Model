@@ -80,11 +80,11 @@ class ColorMap
         // Define the gradient stops
         (double pos, byte r, byte g, byte b)[] stops = new (double, byte, byte, byte)[]
         {
-            (0.0, 0, 0, 0),       // Black
+            (0.0, 0, 0, 0),        // Black
             (0.25, 0, 0, 255),     // Blue
-            (0.5, 0, 255, 0),     // Green
+            (0.5, 0, 255, 0),      // Green
             (0.75, 255, 0, 0),     // Red
-            (1.0, 255, 255, 255)  // White
+            (1.0, 255, 255, 255)   // White
         };
 
         // Find which segment the value is in

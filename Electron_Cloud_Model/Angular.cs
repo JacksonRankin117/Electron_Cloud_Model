@@ -2,22 +2,13 @@ using System.Numerics;
 
 class Angular
 {
-    // Compute factorial for normalization
-    public static long Factorial(int n)
-    {   
-        // Checks for cases
-        if (n < 0) throw new ArgumentException("n must be a positive number, bonehead. We are NOT doing the Gamma function");
-        if (n == 0 || n == 1) return 1;
-
-        // Iteration loop
-        long result = 1;
-        for (int i = 2; i <= n; i++)
-        {
-            result *= i;
-        }
-
-        // Return the factorial solution
-        return result;
+    // Spherical Harmonics Y_l^m(theta, phi)
+    public static Complex Ylm(int l, int m, double theta, double phi)
+    {
+        double norm = Math.Sqrt((2.0 * l + 1) / (4.0 * Math.PI) * Factorial(l - Math.Abs(m)) / (double)Factorial(l + Math.Abs(m)));
+        double leg = AssociatedLegendre(l, Math.Abs(m), Math.Cos(theta));
+        Complex exp = Complex.Exp(Complex.ImaginaryOne * m * phi);
+        return norm * leg * exp;
     }
 
     // Associated Legendre Polynomial P_l^m(x)
@@ -55,12 +46,22 @@ class Angular
         return plm;
     }
 
-    // Spherical Harmonics Y_l^m(theta, phi)
-    public static Complex Ylm(int l, int m, double theta, double phi)
-    {
-        double norm = Math.Sqrt((2.0 * l + 1) / (4.0 * Math.PI) * Factorial(l - Math.Abs(m)) / (double)Factorial(l + Math.Abs(m)));
-        double leg = AssociatedLegendre(l, Math.Abs(m), Math.Cos(theta));
-        Complex exp = Complex.Exp(Complex.ImaginaryOne * m * phi);
-        return norm * leg * exp;
+    // Compute factorial (again)
+    public static double Factorial(int n)
+    {   
+        // Checks for cases
+        if (n < 0) throw new ArgumentException("n must be a positive number, bonehead. We are NOT doing the Gamma function");
+        if (n == 0 || n == 1) return 1;
+
+        // Iteration loop
+        double result = 1;
+        for (int i = 2; i <= n; i++)
+        {
+            result *= i;
+        }
+
+        // Return the factorial solution
+        return result;
     }
+
 }

@@ -10,13 +10,13 @@ class Program
         sw.Start();
 
         // Quantum Numbers
-        int n = 5;
-        int l = 3;
+        int n = 7;
+        int l = 5;
         int m = 2;
 
         // File path. Change this to your desired file destination.
         // i.e. C:\Users\jackson.rankin\Desktop\Projects\Electron_Cloud_Model\
-        string filepath = "";
+        string filepath = "/Users/jackson.rankin/Desktop/Student/6/CSE310/Electron_Cloud_Model/Electron_Cloud_Model/";
 
         // Calculate the orbital. This is really good for getting an image. I wouldn't recommend changing these arguments
         // They are set up in a way to get pretty good image resolution (2000 x 2000), and keeps the scaling fairly constant per 
