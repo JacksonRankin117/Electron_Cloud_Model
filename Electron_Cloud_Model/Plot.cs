@@ -27,7 +27,7 @@ class Plot
             for (int x = 0; x < cols; x++)
             {
                 double value = data[y, x];
-                var (r, g, b) = colormap.HotCold(value);
+                var (r, g, b) = colormap.Gradient(value);
 
                 writer.WriteLine($"{r} {g} {b}");
             }
