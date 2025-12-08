@@ -10,7 +10,7 @@ class Psi
 
     public static double[,] Orbital(int n, int l, int m,
                                 double widthBohr, double heightBohr,
-                                int res)
+                                double res)
     {
         if (Math.Abs(m) > l)
             throw new ArgumentException("Invalid quantum number m for given l.");
