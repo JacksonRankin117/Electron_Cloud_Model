@@ -18,36 +18,11 @@ So if you use this equation, you can find the particle's probability density. Th
 
 The next symbol of note is $\nabla^2$, which is called the Laplacian. In three dimensions, it can be expanded to (using ISO convention):
 
-$$
-\nabla^2 \psi = 
+$$\nabla^2 \psi = \left(\frac{\partial^2 \psi}{\partial x^2} + \frac{\partial^2 \psi}{\partial y^2} + \frac{\partial^2 \psi}{\partial z^2}\right)\quad \left[\text{Cartesian } \psi \left(x,  y,  z\right)\right]$$
 
-\left( 
-\frac{\partial^2 \psi}{\partial x^2} + 
-\frac{\partial^2 \psi}{\partial y^2} + 
-\frac{\partial^2 \psi}{\partial z^2}
-\right) 
+$$\nabla^2 \psi = \frac{1}{r^{2}}\frac{\partial}{\partial r}\left(r^{2}\frac{\partial \psi}{\partial r}\right) + \frac{1}{r^{2}\sin\theta}\frac{\partial}{\partial \theta}\left(\sin\theta\ \frac{\partial \psi}{\partial \theta}\right) + \frac{1}{r^{2}\sin^{2}\theta}\ \frac{\partial^{2}\psi}{\partial\phi^{2}}\quad \left[\text{Spherical } \psi \left(r,  \theta,  \phi \right)\right]$$
 
-\quad \left[\text{Cartesian } \psi \left(x, \; y, \; z\right)\right]
-$$
-
-$$
-\nabla^2 \psi = 
-
-\frac{1}{r^{2}}\frac{\partial}{\partial r}\left(r^{2}\frac{\partial \psi}{\partial r}\right) + 
-\frac{1}{r^{2}\sin\theta}\frac{\partial}{\partial \theta}\left(\sin\theta\ \frac{\partial \psi}{\partial \theta}\right) + 
-\frac{1}{r^{2}\sin^{2}\theta}\ \frac{\partial^{2}\psi}{\partial\phi^{2}}
-
-\quad \left[\text{Spherical } \psi \left(r, \; \theta, \; \phi \right)\right]
-$$
-
-$$ 
-\nabla^2 \psi = 
-
-\frac{1}{\rho}\ \frac{\partial}{\partial \rho}\left(\rho \ \frac{\partial \psi}{\partial \rho}\right) + 
-\frac{1}{\rho^{2}}\ \frac{\partial^{2}\psi}{\partial \phi^{2}} + 
-\frac{\partial^{2}\psi}{\partial z^{2}}
-
-\quad \left[\text{Cylindrical } \psi \left(\rho, \; \phi, \; z \right)\right]$$
+$$\nabla^2 \psi = \frac{1}{\rho}\ \frac{\partial}{\partial \rho}\left(\rho \ \frac{\partial \psi}{\partial \rho}\right) + \frac{1}{\rho^{2}}\ \frac{\partial^{2}\psi}{\partial \phi^{2}} + \frac{\partial^{2}\psi}{\partial z^{2}}\quad \left[\text{Cylindrical } \psi \left(\rho,  \phi,  z \right)\right]$$
 
 Since we will be working with orbitals, it will be useful to work with spherical coordinates, as it will be harder to describe the motion of an orbiting electron with Cartesian or Cylindrical coordinates.
 
@@ -64,7 +39,7 @@ Our goal is to find what $\psi$ is, but you'll find very quickly that this is an
 The answer is pray that the solution looks something like this:
 
 $$
-\psi \left(r, \; \theta, \; \phi \right) = 
+\psi \left(r,  \theta,  \phi \right) = 
 R(r) \Theta(\theta) \Phi(\phi)
 $$
 
@@ -108,10 +83,7 @@ $$\frac{1}{R}\left[\frac{d}{d r}\left(r^{2}\frac{d R}{d r}\right)\right] +
 
 Which we can rearrange to find:
 
-$$\underbrace{\frac{1}{R}\left[\frac{d}{d r}\left(r^{2}\frac{d R}{d r}\right)\right] -\frac{2mr^2}{\hbar^2}(U-E)}_{\text{= function of } r} + 
-
-\underbrace{\frac{1}{\Theta}\left[\frac{1}{\sin\theta}\frac{d}{d \theta}\left(\sin\theta\ \frac{d \Theta }{d \theta}\right)\right] + 
-\frac{1}{\Phi}\left[\frac{1}{\sin^{2}\theta}\ \frac{d^{2} \Phi}{d\phi^{2}}\right]}_{\text{= function of } \theta \text{ and }\phi} = 0$$
+$$\underbrace{\frac{1}{R}\left[\frac{d}{d r}\left(r^{2}\frac{d R}{d r}\right)\right] -\frac{2mr^2}{\hbar^2}(U-E)}_{\text{= function of } r} + \underbrace{\frac{1}{\Theta}\left[\frac{1}{\sin\theta}\frac{d}{d \theta}\left(\sin\theta\ \frac{d \Theta }{d \theta}\right)\right] + \frac{1}{\Phi}\left[\frac{1}{\sin^{2}\theta}\ \frac{d^{2} \Phi}{d\phi^{2}}\right]}_{\text{= function of } \theta \text{ and }\phi} = 0$$
 
 Lets examine this generally. If we have two function added up together, and when added up, they both equal 0, one must equal the negative of itself. So if we have a variable $\lambda$ to represent the function of $r$, the function of $\theta$ and $\phi$ must be $-\lambda$. In fact, lets expand upon this:
 
@@ -152,7 +124,7 @@ Lets look back at what we have.
 $$\frac{1}{\Theta}\left[\frac{1}{\sin\theta}\frac{d}{d \theta}\left(\sin\theta\ \frac{d \Theta }{d \theta}\right)\right] + 
 \frac{1}{\Phi}\left[\frac{1}{\sin^{2}\theta}\ \frac{d^{2} \Phi}{d\phi^{2}}\right] = -\lambda$$
 
-We know that $ \frac{1}{\Phi}\frac{d^{2} \Phi}{d\phi^{2}} = -m^2$, so we can substitute.
+We know that $\frac{1}{\Phi}\frac{d^{2} \Phi}{d\phi^{2}} = -m^2$, so we can substitute.
 
 $$\frac{1}{\Theta}\left[\frac{1}{\sin\theta}\frac{d}{d \theta}\left(\sin\theta\ \frac{d \Theta }{d \theta}\right)\right] + 
 \left[\frac{-m^2}{\sin^{2}\theta}\right] = -\lambda$$
@@ -172,30 +144,25 @@ $$\sin^2\theta + x^2 = 1$$
 
 $$\sin^2\theta = 1-x^2$$
 
-> $$\sin\theta = \sqrt{1-x^2}$$
+$$\sin\theta = \sqrt{1-x^2}$$
 
 Lets also take the derivative of $x$ with respect to $\theta$:
 
-> $$\frac{d}{d\theta}\cos\theta = -\sin\theta$$
+$$\frac{d}{d\theta}\cos\theta = -\sin\theta$$
 
 Another important result is to find what $\frac{d}{d\theta}$ actually is:
 
->$$\frac{d}{d\theta} = \frac{dx}{d\theta}\frac{d}{dx} = -\sin\theta \frac{d}{dx}$$
+$$\frac{d}{d\theta} = \frac{dx}{d\theta}\frac{d}{dx} = -\sin\theta \frac{d}{dx}$$
 
 One last assumption. Lets assume that our $\Theta(\theta)$ is equivalent to a function $P(x)$
 
 These three results we can plug into the equation thats supposedly another form for the Associated Legendre Polynomial equation. 
 
-$$\left[\frac{1}{\sin\theta}\left(-\sin\theta \frac{d}{dx}\right)\left(\sin\theta \left(-\sin\theta \frac{d}{dx}\right) P(x) \right)\right] + 
-\left[l(l+1) + \frac{-m^2}{1-x^2}\right]P(x) = 0$$
+$$\left[\frac{1}{\sin\theta}\left(-\sin\theta \frac{d}{dx}\right)\left(\sin\theta \left(-\sin\theta \frac{d}{dx}\right) P(x) \right)\right] + \left[l(l+1) + \frac{-m^2}{1-x^2}\right]P(x) = 0$$
 
 And now we simplify to this:
 
-$$
-\left(\frac{d}{dx}\right)
-(1-x^2)  \, P'(x) + 
-\left[l(l+1) + \frac{-m^2}{1-x^2}\right]P(x) = 0
-$$
+$$\left(\frac{d}{dx}\right)(1-x^2)  \, P'(x) + \left[l(l+1) + \frac{-m^2}{1-x^2}\right]P(x) = 0$$
 
 The solutions to $P(x)$, or, equivalently, $\Theta(\theta)$, are, of course, the Legendre Polynomials.
 
@@ -207,27 +174,15 @@ We now have our second result. By now we have completely forgotten what we are w
 
 Start from:
 
-$$
-\frac{1}{R}\frac{d}{dr}\!\big(r^{2}R'\big)
--\frac{2mr^{2}}{\hbar^{2}}(U-E)
-= \lambda.
-$$
+$$\frac{1}{R}\frac{d}{dr}\!\big(r^{2}R'\big) -\frac{2mr^{2}}{\hbar^{2}}(U-E) = \lambda.$$
 
 Multiply by $R$:
 
-$$
-\frac{d}{dr}(r^{2}R') 
-- \frac{2mr^{2}}{\hbar^{2}}(U-E)R
-= \lambda R.
-$$
+$$\frac{d}{dr}(r^{2}R') - \frac{2mr^{2}}{\hbar^{2}}(U-E)R = \lambda R.$$
 
 Rearrange:
 
-$$
-\frac{d}{dr}(r^{2}R') 
-- \Big[\frac{2mr^{2}}{\hbar^{2}}(U-E) + \lambda\Big]R
-= 0.
-$$
+$$\frac{d}{dr}(r^{2}R') - \Big[\frac{2mr^{2}}{\hbar^{2}}(U-E) + \lambda\Big]R = 0.$$
 
 Use:
 
@@ -237,68 +192,35 @@ $$
 
 Then:
 
-$$
-2rR' + r^{2}R''
-- \Big[\frac{2mr^{2}}{\hbar^{2}}(U-E) + \lambda\Big]R
-= 0.
-$$
+$$2rR' + r^{2}R'' - \Big[\frac{2mr^{2}}{\hbar^{2}}(U-E) + \lambda\Big]R = 0.$$
 
 Let $u(r)=rR(r)$. Then:
 
-$$
-u' = R + rR', \qquad
-u'' = 2R' + rR''.
-$$
+$$u' = R + rR', \qquad u'' = 2R' + rR''.$$
 
 So:
 
-$$
-r u'' = 2rR' + r^{2}R''.
-$$
+$$r u'' = 2rR' + r^{2}R''.$$
 
 Substitute:
 
-$$
-r u'' 
-- \Big[\frac{2mr^{2}}{\hbar^{2}}(U-E) + \lambda\Big]\frac{u}{r}
-= 0.
-$$
+$$r u'' - \Big[\frac{2mr^{2}}{\hbar^{2}}(U-E) + \lambda\Big]\frac{u}{r} = 0.$$
 
 Divide by $r$:
 
-$$
-u'' 
-- \Big[\frac{2m}{\hbar^{2}}(U-E) + \frac{\lambda}{r^{2}}\Big]u
-= 0.
-$$
+$$u'' - \Big[\frac{2m}{\hbar^{2}}(U-E) + \frac{\lambda}{r^{2}}\Big]u = 0.$$
 
 Insert $\lambda = \ell(\ell+1)$:
 
-$$
-u'' 
-- \Big[\frac{2m}{\hbar^{2}}(U-E) 
-+ \frac{\ell(\ell+1)}{r^{2}}\Big]u
-= 0.
-$$
+$$u''  - \Big[\frac{2m}{\hbar^{2}}(U-E)  + \frac{\ell(\ell+1)}{r^{2}}\Big]u = 0.$$
 
 Rewrite using $E-U$:
 
-$$
-u'' 
-+ \Big[\frac{2m}{\hbar^{2}}(E-U) 
-- \frac{\ell(\ell+1)}{r^{2}}\Big]u
-= 0.
-$$
+$$u'' + \Big[\frac{2m}{\hbar^{2}}(E-U) - \frac{\ell(\ell+1)}{r^{2}}\Big]u = 0.$$
 
 And finally, we get a result:
 
-$$
-u''(r)
-= \left[
-\frac{\ell(\ell+1)}{r^{2}}
-+ \frac{2m}{\hbar^{2}} \big( U(r) - E \big)
-\right] u(r)
-$$
+$$u''(r) = \left[\frac{\ell(\ell+1)}{r^{2}} + \frac{2m}{\hbar^{2}} \big( U(r) - E \big)\right] u(r)$$
 
 We know that the potential of a charged particle is given by:
 
@@ -306,37 +228,23 @@ $$U = \frac{1}{4\pi \varepsilon_0} \frac{q_1q_2}{r}$$
 
 And for a positive nucleus with a charge of $-Ze$, where $Z$ is the quantity of protons, and $e$ is the charge of an electron, we get:
 
-$$U = -\frac{Ze^2}{4\pi \varepsilon_0} $$
+$$U = -\frac{Ze^2}{4\pi \varepsilon_0}$$
 
 Substituting:
 
-$$
-u''(r)
-= \left[
-\frac{\ell(\ell+1)}{r^{2}}
-
--\frac{2m}{\hbar^{2}}\left(\frac{Ze^2}{4\pi \varepsilon_0} \right)
-
-- \frac{2mE}{\hbar^{2}} \right] u(r)
-$$
+$$u''(r) = \left[\frac{\ell(\ell+1)}{r^{2}} - \frac{2m}{\hbar^{2}}\left(\frac{Ze^2}{4\pi \varepsilon_0} \right) - \frac{2mE}{\hbar^{2}} \right] u(r)$$
 
 At small $r$ $(r \to 0)$:
 
-$$
-u(r) \sim r^{\ell+1}
-$$
+$$u(r) \sim r^{\ell+1}$$
 
 At large $r$ $(r \to \infty)$:
 
-$$
-u(r) \sim e^{-k r}, \quad k = \frac{\sqrt{-2 m E}}{\hbar}
-$$
+$$u(r) \sim e^{-k r}, \quad k = \frac{\sqrt{-2 m E}}{\hbar}$$
 
 So we set:
 
-$$
-u(r) = r^{\ell+1} e^{-k r} v(r)
-$$
+$$u(r) = r^{\ell+1} e^{-k r} v(r)$$
 
 where $v(r)$ is a regular function.
 
@@ -344,29 +252,20 @@ Now we solve for $v(r)$
 
 Plugging $u(r) = r^{\ell+1} e^{-k r} v(r)$ into the radial equation gives a differential equation with polynomial solutions:
 
-$$
-v(r) = L_{n-\ell-1}^{2\ell+1}(2 k r)
-$$
+$$v(r) = L_{n-\ell-1}^{2\ell+1}(2 k r)$$
 
 where $L_p^q(x)$ is an associated Laguerre polynomial, and:
 
 - $n = 1, 2, 3, \dots$ (principal quantum number)  
 - $\ell = 0, 1, \dots, n-1$ (orbital quantum number)
 
-
 So our full radial wavefunction is:
 
-$$
-R_{n\ell}(r) = \frac{u(r)}{r} = r^\ell e^{-k r} L_{n-\ell-1}^{2\ell+1}(2 k r)
-$$
-
-Energy eigenvalues
+$$R_{n\ell}(r) = \frac{u(r)}{r} = r^\ell e^{-k r} L_{n-\ell-1}^{2\ell+1}(2 k r)$$
 
 The quantization condition gives the hydrogenic energy levels:
 
-$$
-E_n = - \frac{m Z^2 e^4}{2 (4 \pi \varepsilon_0)^2 \hbar^2 n^2}, \quad n = 1, 2, 3, \dots
-$$
+$$E_n = - \frac{m Z^2 e^4}{2 (4 \pi \varepsilon_0)^2 \hbar^2 n^2}, \quad n = 1, 2, 3, \dots$$
 
 ### Summary
 
@@ -374,8 +273,6 @@ $$
 - **Angular wavefunction**: $Y_\ell^m(\theta, \phi) = P_\ell^m(\cos\theta) e^{i m \phi}$
 - **Full hydrogenic wavefunction**: 
 
-$$
-\psi_{n\ell m}(r, \theta, \phi) = R_{n\ell}(r) Y_\ell^m(\theta, \phi)
-$$
+$$\psi_{n\ell m}(r, \theta, \phi) = R_{n\ell}(r) Y_\ell^m(\theta, \phi)$$
 
-Angular harmonics and associated Legendre polynomials have known solutions, which we can implememnt very easily using code. 
+Angular harmonics and associated Legendre polynomials have known solutions, which we can implememnt very easily using code using recursive functions.
