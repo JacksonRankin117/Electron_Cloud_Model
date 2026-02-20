@@ -10,9 +10,9 @@ class Program
         sw.Start();
 
         // Quantum Numbers
-        int n = 4;
-        int l = 3;
-        int m = 1;
+        int n = 17;
+        int l = 12;
+        int m = -5;
 
         // File path. Change this to your desired file destination.
         // i.e. C:\Users\user\Projects\Electron_Cloud_Model\

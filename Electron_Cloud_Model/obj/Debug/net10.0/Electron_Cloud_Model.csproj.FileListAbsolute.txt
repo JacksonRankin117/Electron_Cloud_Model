@@ -1,0 +1,15 @@
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/bin/Debug/net10.0/Electron_Cloud_Model
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/bin/Debug/net10.0/Electron_Cloud_Model.deps.json
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/bin/Debug/net10.0/Electron_Cloud_Model.runtimeconfig.json
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/bin/Debug/net10.0/Electron_Cloud_Model.dll
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/bin/Debug/net10.0/Electron_Cloud_Model.pdb
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net10.0/Electron_Cloud_Model.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net10.0/Electron_Cloud_Model.AssemblyInfoInputs.cache
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net10.0/Electron_Cloud_Model.AssemblyInfo.cs
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net10.0/Electron_Cloud_Model.csproj.CoreCompileInputs.cache
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net10.0/Electron_Cloud_Model.sourcelink.json
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net10.0/Electron_Cloud_Model.dll
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net10.0/refint/Electron_Cloud_Model.dll
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net10.0/Electron_Cloud_Model.pdb
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net10.0/Electron_Cloud_Model.genruntimeconfig.cache
+/Users/jacksonrankin/Developer/Electron_Cloud_Model/Electron_Cloud_Model/obj/Debug/net10.0/ref/Electron_Cloud_Model.dll
